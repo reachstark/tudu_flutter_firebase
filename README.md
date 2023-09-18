@@ -1,16 +1,18 @@
-# bmi_calculator
+# TuDu - a simple To-Do List app
 
-A new Flutter project.
+A to-do list flutter app, built from scratch. 
 
-## Getting Started
+## Material 3 Design
 
-This project is a starting point for a Flutter application.
+Most components are from material 3 design guideline while some others are custom designed.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+• Using Firebase NoSQL, whether users have a network connectivity, they can always access the list on the device.
+• Store task data on the cloud
+• Multiple users can access/modify the list simultaneously in lightning speed
+• Some basic functions include:
+    • Add task
+    • Update task
+    • Remove task
+    • Search filter task
