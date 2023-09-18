@@ -16,3 +16,13 @@ Most components are from material 3 design guideline while some others are custo
     • Update task
     • Remove task
     • Search filter task
+
+## Screenshots
+
+![Home-screen](https://ibb.co/5X0wzdV)
+![Search](https://ibb.co/8M5ywHs)
+![Not Found Error](https://ibb.co/3yQYYPr)
+![Add New Task](https://ibb.co/23DvKpy)
+![Remove Task](https://ibb.co/c6CRM7D)
+![Update Task](https://ibb.co/XYK2TLK)
+![Misuse Warning](https://ibb.co/zRwtYcW)
