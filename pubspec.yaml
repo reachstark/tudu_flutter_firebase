@@ -1,0 +1,45 @@
+name: todolist_flutter
+description: A to-do list flutter app, built from scratch. Not perfect, but it works.
+
+publish_to: 'none'
+
+version: 1.0.2
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+
+  cupertino_icons: ^1.0.2
+  shared_preferences: ^2.2.1
+  provider: ^6.0.1
+  cloud_firestore: ^4.9.1
+  firebase_core: ^2.15.1
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+
+
+
+
+flutter:
+
+
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Rubik-Regular.ttf
