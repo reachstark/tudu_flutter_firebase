@@ -176,7 +176,7 @@ class _TaskListState extends State<TaskList> {
                 return const NotFoundList();
               }
 
-              // Filter the tasks based on the switch toggle.
+              // Filter the tasks based on the switch toggle. Not working currently.
               final completedTasks =
                   tasks.where((task) => task.get('isComplete')).toList();
 
@@ -191,26 +191,33 @@ class _TaskListState extends State<TaskList> {
                     final taskName = task.get('name');
                     final isComplete = task.get('isComplete');
 
-                    return ListTile(
-                      title: Text(taskName,
-                          style: isComplete
-                              ? completedTaskStyle
-                              : activeTaskStyle),
-                      trailing: Checkbox(
-                        value: isComplete,
-                        onChanged: (bool? value) {
-                          widget.taskStateManager.toggleTaskCompletion(Task(
-                              id: task.id,
-                              name: taskName,
-                              isComplete: isComplete));
-                        },
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Card(
+                        color:
+                            isComplete ? cardCompletedStyle : cardActiveStyle,
+                        child: ListTile(
+                          title: Text(taskName,
+                              style: isComplete
+                                  ? completedTaskStyle
+                                  : activeTaskStyle),
+                          trailing: Checkbox(
+                            value: isComplete,
+                            onChanged: (bool? value) {
+                              widget.taskStateManager.toggleTaskCompletion(Task(
+                                  id: task.id,
+                                  name: taskName,
+                                  isComplete: isComplete));
+                            },
+                          ),
+                          onTap: () {
+                            updateTask(Task(id: task.id, name: taskName));
+                          },
+                          onLongPress: () {
+                            removeTask(Task(id: task.id, name: taskName));
+                          },
+                        ),
                       ),
-                      onTap: () {
-                        updateTask(Task(id: task.id, name: taskName));
-                      },
-                      onLongPress: () {
-                        removeTask(Task(id: task.id, name: taskName));
-                      },
                     );
                   },
                 );
@@ -224,26 +231,33 @@ class _TaskListState extends State<TaskList> {
                     final taskName = task.get('name');
                     final isComplete = task.get('isComplete');
 
-                    return ListTile(
-                      title: Text(taskName,
-                          style: isComplete
-                              ? completedTaskStyle
-                              : activeTaskStyle),
-                      trailing: Checkbox(
-                        value: isComplete,
-                        onChanged: (bool? value) {
-                          widget.taskStateManager.toggleTaskCompletion(Task(
-                              id: task.id,
-                              name: taskName,
-                              isComplete: isComplete));
-                        },
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Card(
+                        color:
+                            isComplete ? cardCompletedStyle : cardActiveStyle,
+                        child: ListTile(
+                          onTap: () {
+                            updateTask(Task(id: task.id, name: taskName));
+                          },
+                          onLongPress: () {
+                            removeTask(Task(id: task.id, name: taskName));
+                          },
+                          title: Text(taskName,
+                              style: isComplete
+                                  ? completedTaskStyle
+                                  : activeTaskStyle),
+                          trailing: Checkbox(
+                            value: isComplete,
+                            onChanged: (bool? value) {
+                              widget.taskStateManager.toggleTaskCompletion(Task(
+                                  id: task.id,
+                                  name: taskName,
+                                  isComplete: isComplete));
+                            },
+                          ),
+                        ),
                       ),
-                      onTap: () {
-                        updateTask(Task(id: task.id, name: taskName));
-                      },
-                      onLongPress: () {
-                        removeTask(Task(id: task.id, name: taskName));
-                      },
                     );
                   },
                 );
