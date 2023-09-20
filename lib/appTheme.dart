@@ -56,3 +56,7 @@ const notFoundStyle = TextStyle(
   color: Colors.orangeAccent,
   fontSize: 14,
 );
+
+// For the cards
+const cardActiveStyle = Color(0xFFFFAB40);
+const cardCompletedStyle = Color(0xFFFFD6AA);
