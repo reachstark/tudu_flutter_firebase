@@ -1,3 +1,5 @@
+// This class is not required after migration to Firebase
+
 import 'package:flutter/material.dart';
 
 class TaskTile extends StatefulWidget {
